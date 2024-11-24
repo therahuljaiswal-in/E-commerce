@@ -30,7 +30,7 @@ const AddProduct = () => {
       let formData = new FormData();
       formData.append('product', image);
 
-      await fetch('https://e-commerce-backend-adlw.onrender.com/upload',{
+      await fetch('https://e-commerce-backend-final.onrender.com/upload',{
         method:'POST' ,
         headers:{
           Accept:'application/json',
@@ -41,7 +41,7 @@ const AddProduct = () => {
       if(responseData.success){
         product.image = responseData.image_url;
         console.log(product);
-        await fetch('https://e-commerce-backend-adlw.onrender.com/addproduct', {
+        await fetch('https://e-commerce-backend-final.onrender.com/addproduct', {
           method: 'POST',
           headers:{
             Accept: 'application/json',
